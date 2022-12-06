@@ -20,9 +20,11 @@ psp:
 nodeport: false
 
 # "special" Openshift. Set to true when deploying to any openshift flavour
-openshift: false
+openshift: true
 
-ocCreateRoute: false
+ocCreateRoute: true
+
+loadgen: true
 
 ######################################
 # Affinities for individual workloads
@@ -55,7 +57,7 @@ ratings: {}
 
 redis:
   # Storage class to use with redis statefulset.
-  storageClassName: standard
+  storageClassName: managed-nfs-storage
 
 shipping: {}
 
