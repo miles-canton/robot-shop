@@ -1,5 +1,5 @@
 ---
-{{if .Values.loadgen}}
+{{if .Values.load.gen}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,11 +22,11 @@ spec:
           - name: HOST
             value: "http://web:8080/"
           - name: NUM_CLIENTS
-            value: "15"
+            value: {{.Values.load.client}}
           - name: SILENT
             value: "1"
           - name: ERROR
-            value: "1"
+            value: {{.Values.load.generr}}
         image: robotshop/rs-load:latest
         resources:
           limits:
