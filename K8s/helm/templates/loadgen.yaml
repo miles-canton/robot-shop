@@ -22,11 +22,11 @@ spec:
           - name: HOST
             value: "http://web:8080/"
           - name: NUM_CLIENTS
-            value: {{.Values.load.clients}}
+            value: "{{.Values.load.clients}}"
           - name: SILENT
             value: "1"
           - name: ERROR
-            value: {{.Values.load.generr}}
+            value: "{{.Values.load.generr}}"
         image: robotshop/rs-load:latest
         resources:
           limits:
