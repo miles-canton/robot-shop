@@ -24,7 +24,10 @@ openshift: true
 
 ocCreateRoute: true
 
-loadgen: true
+load:
+  gen: true
+  generr: 1
+  clients: 15
 
 ######################################
 # Affinities for individual workloads
