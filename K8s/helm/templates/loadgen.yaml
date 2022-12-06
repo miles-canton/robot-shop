@@ -22,7 +22,7 @@ spec:
           - name: HOST
             value: "http://web:8080/"
           - name: NUM_CLIENTS
-            value: {{.Values.load.client}}
+            value: {{.Values.load.clients}}
           - name: SILENT
             value: "1"
           - name: ERROR
